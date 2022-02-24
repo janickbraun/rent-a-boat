@@ -85,7 +85,7 @@ export default function Home() {
               boatId: boatId,
             })
             .then((res) => {
-              var perHour = res.data.price
+              var perHour = Number(res.data.price)
               var hours = Number(totalTime.split(":")[0]) + 1
               setPrice(hours * perHour)
             })
