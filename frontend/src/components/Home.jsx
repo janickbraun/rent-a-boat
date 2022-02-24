@@ -86,7 +86,7 @@ export default function Home() {
             })
             .then((res) => {
               var perHour = res.data.price
-              var hours = totalTime.split(":")[0] + 1
+              var hours = Number(totalTime.split(":")[0]) + 1
               setPrice(hours * perHour)
             })
             .catch((err) => console.log(err))
